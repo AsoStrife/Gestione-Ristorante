@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Ristorante" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Ristorante" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Ristorante" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config gtk+-2.0 --cflags `" />
+			<Add option="`pkg-config –cflags gtk+-2.0 gmodule-export-2.0`" />
+			<Add option="`pkg-config –cflags libglade-2.0`" />
+			<Add directory="/usr/include/libglade-2.0/" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config gtk+-2.0 --libs`" />
+			<Add option="`pkg-config –libs gtk+-2.0 gmodule-export-2.0`" />
+			<Add option="`pkg-config –libs libglade-2.0`" />
+			<Add option="-export-dynamic" />
+			<Add library="glade-2.0" />
+			<Add directory="/usr/lib/libglade/2.0" />
+		</Linker>
+		<Unit filename="data/idMenu.dat" />
+		<Unit filename="data/menu.dat" />
+		<Unit filename="headers/core.h" />
+		<Unit filename="headers/debugFuncion" />
+		<Unit filename="headers/debugFuncion.h" />
+		<Unit filename="headers/gui.h" />
+		<Unit filename="headers/header.h" />
+		<Unit filename="headers/preCore.h" />
+		<Unit filename="headers/struct.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
